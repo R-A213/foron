@@ -1,0 +1,184 @@
+*{  margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    overflow-y: scroll;
+   overflow-x: hidden!important;
+}
+
+body{
+    background-image: url(images/bg-image.png);
+    background-repeat: repeat;
+    background-attachment: fixed; /* Optional: makes bg fixed during scroll */
+    min-height: 100vh;
+    padding-bottom: 80px;
+    
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+   
+}
+
+#logo{
+    height: 30vh;
+    margin-bottom:5px;
+    max-height: 200px;
+    width: auto;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+  /*  transition: transform 0.3s ease;  Smooth hover effect */
+}
+
+.type{  
+    background-color:black;
+    color:white;
+    border-radius:15px;
+    width:125px;
+    padding: 5px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.modal-body{
+   background-color: lightgray;
+   word-break: break-word;
+
+}
+/* When modal is open */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.modal-img{
+  height: 100px !important;
+  width:120px;
+  float: left;
+  margin:0px 10px 0px 10px }
+.desc{
+  padding-left:5px ;
+  padding-right:5px;
+}  
+.modal-body p {
+  word-break: break-word; /* Break long words */
+}
+
+/* For price/titles */
+.modal-body h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.modal-body {
+  font-family: 'Tajawal', 'Arial', sans-serif;
+}
+
+.modal-dialog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:80px;
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  width:70vh;
+}
+
+.card{
+  display: flex;
+  flex-direction:row;
+  padding:10px 8px 10px 8px;
+  margin-bottom:10px ;
+
+}
+
+.nav{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1030;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 12px 0;
+    
+}
+
+@media(max-width:768px)
+{
+  .modal-content{
+    width:65vh;
+  }
+  .modal-img{
+    height: 90px;
+  }
+
+}
+@media(max-width:576px)
+{
+  .modal-content{
+    width:50vh;
+    text-align: center;
+  }
+  .desc{
+    font-size:17px;
+    margin-top:6px;
+  }  
+  .modal-img{
+    height: 80px;
+  }
+  .card{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   }
+ 
+}
+
+@media(max-width:376px)
+{
+  .desc p{
+    font-size:15px;
+    text-align: center;
+  }  
+  h5{font-size:large;}
+  .modal-img{
+    height: 90px;
+  }
+ .card{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+ }
+}
+
